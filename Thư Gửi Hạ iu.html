@@ -1,0 +1,245 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Thư Gửi Em</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+/* Layout: one lined-notebook letter centered on a soft pink ground, washi tape on top, heart button below that floats hearts up. */
+:root {
+  --bg: #FFEEF2;
+  --paper: #FFFCF8;
+  --ink: #5B3844;
+  --muted: #9A6676;
+  --accent: #F0607F;
+  --accent-soft: #FFD3DE;
+  --tape: #CDEBDD;
+  --line: #F6D9E0;
+  --shadow: rgba(240, 96, 127, 0.18);
+  --btn-bg: #C93560;
+  --btn-fg: #FFFFFF;
+  --font-display: 'Pacifico', 'Segoe Script', cursive;
+  --font-body: 'Mali', 'Quicksand', 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #24141B;
+    --paper: #33202A;
+    --ink: #FBE3EA;
+    --muted: #D6A5B4;
+    --accent: #FF8FAB;
+    --accent-soft: #5A2E3D;
+    --tape: #3B5A4D;
+    --line: #46303A;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --btn-bg: #FF8FAB;
+    --btn-fg: #3A1220;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #24141B;
+  --paper: #33202A;
+  --ink: #FBE3EA;
+  --muted: #D6A5B4;
+  --accent: #FF8FAB;
+  --accent-soft: #5A2E3D;
+  --tape: #3B5A4D;
+  --line: #46303A;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --btn-bg: #FF8FAB;
+  --btn-fg: #3A1220;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  padding-block: 40px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  overflow-x: hidden;
+}
+.wrap { max-width: 540px; margin: 0 auto; position: relative; }
+
+.head { text-align: center; margin-bottom: 36px; }
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 11vw, 3.4rem);
+  line-height: 1.25;
+  margin: 8px 0 0;
+  color: var(--accent);
+  text-wrap: balance;
+}
+
+.paper {
+  position: relative;
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 31px, var(--line) 31px, var(--line) 32px);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px var(--shadow);
+  padding: 44px 22px 28px 50px;
+  line-height: 32px;
+}
+.paper::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 36px;
+  width: 2px;
+  background: var(--accent-soft);
+}
+.tape {
+  position: absolute;
+  top: -14px; left: 50%;
+  width: 120px; height: 30px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: var(--tape);
+  opacity: 0.9;
+  border-radius: 3px;
+}
+.date {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin: 0 0 32px;
+}
+.letter p { margin: 0 0 32px; min-width: 0; overflow-wrap: anywhere; }
+.letter p.greet { font-weight: 600; }
+
+.sign {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  line-height: 44px;
+  color: var(--accent);
+  margin-top: 8px;
+}
+.sign svg { width: 22px; height: 22px; flex: none; }
+
+.actions { display: flex; justify-content: center; margin-top: 40px; }
+button.hearts {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px var(--shadow);
+  transition: transform 0.15s ease;
+}
+button.hearts:hover { transform: translateY(-2px); }
+button.hearts:active { transform: scale(0.96); }
+button.hearts:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+button.hearts svg { width: 18px; height: 18px; }
+
+.deco { position: absolute; color: var(--accent); pointer-events: none; }
+.deco svg { width: 100%; height: 100%; display: block; }
+.d1 { width: 22px; height: 22px; top: 6px; left: 4px; opacity: 0.55; transform: rotate(-14deg); }
+.d2 { width: 14px; height: 14px; top: 34px; left: 34px; opacity: 0.35; }
+.d3 { width: 26px; height: 26px; top: 0; right: 6px; opacity: 0.5; transform: rotate(12deg); }
+
+.rise-layer { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 5; }
+.rise {
+  position: absolute;
+  bottom: -40px;
+  color: var(--accent);
+  animation: rise var(--dur, 3s) ease-out forwards;
+}
+.rise svg { width: 100%; height: 100%; display: block; }
+@keyframes rise {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  15% { opacity: 0.95; }
+  100% { transform: translateY(-85vh) translateX(var(--drift, 0px)) scale(1.1); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation-duration: 0.01s; }
+  button.hearts { transition: none; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
+</svg>
+
+<div class="rise-layer" id="riseLayer" aria-hidden="true"></div>
+
+<main class="wrap">
+  <div class="deco d1"><svg><use href="#heart"/></svg></div>
+  <div class="deco d2"><svg><use href="#heart"/></svg></div>
+  <div class="deco d3"><svg><use href="#heart"/></svg></div>
+
+  <header class="head">
+    <div class="eyebrow">Một lá thư nhỏ</div>
+    <h1>Thư gửi Hạ iu</h1>
+  </header>
+
+  <article class="paper">
+    <div class="tape"></div>
+    <!-- LETTER START: thay nội dung thư bên dưới -->
+    <p class="date">Ngày 20 tháng 10, 2026</p>
+    <div class="letter" id="letter">
+      <p class="greet">Gửi iu của tớ,</p>
+      <p>Hôm nay là 20/10, đã lâu rồi mình chưa viết thật nhiều cho nhau, và tớ muốn dành những dòng chữ thật nhỏ, để nói với cậu một điều rằng: Cảm ơn cậu vì đã luôn ở bên tớ.</p>
+      <p>Tớ biết rằng, dạo này mọi thứ đều không dễ dàng với tớ và cậu. Mình ngày một bận hơn, cuộc sống xoay quanh làm việc và học tập. Trước đây, chưa bao giờ tớ tưởng tượng được rằng, rồi tới một ngày, iu sẽ phải làm thật nhiều việc và vất vả đến thế. Chứng kiến cậu phải làm việc tới sáng sớm, họp những cuộc họp thâu đêm, thật lòng, tớ đã thương cậu bằng tất cả những gì tớ có. Nhiều lúc tớ nghĩ, là sẽ khuyên cậu chậm lại, khuyên cậu không làm, nhưng tớ nhận ra đó là một phần của cậu, là những việc mà cậu sẽ happy, sẽ hạnh phúc khi được làm nó. Với tớ, đó là điều tớ luôn ngưỡng mộ ở cậu, cậu luôn hết mình với mọi thứ, hết mình với đam mê và mọi công việc cậu có.</p>
+      <p>Và tớ ở đây, để nhắc cậu một điều rằng, bất cứ khi nào mệt mỏi và buồn bực bởi tất cả những điều đó, tớ sẽ luôn ở phía sau, động viên và làm chỗ dựa cho cậu. Cuộc sống của tuổi đôi mươi mong cậu lớn lên, mong cậu trưởng thành hơn để làm thêm thật nhiều điều to lớn và ý nghĩa, còn với tớ, iu dấu cũng chỉ là một em bé mới lớn, em bé cần được yêu thương và dỗ dành. Thế giới thì vốn dĩ những điều mập mờ, không chắc chắn, nhưng mỗi khi nghĩ về chuyện mình, có một điều tớ luôn tin: Được gặp và yêu cậu, có lẽ là phép màu của cuộc đời tớ.</p>
+      <p>Và tớ biết rằng, tớ vẫn chưa là một người hoàn hảo, một người đủ mạnh mẽ để cậu dựa vào hoàn toàn, nhưng cảm ơn cậu, vì đã kiên nhẫn với mọi thứ, kiên nhẫn với tớ thật nhiều. Cảm ơn cậu, vì vẫn chọn ở lại bên tớ dù có những chuyện không tốt đã xảy ra, vì đã bao dung với mọi thứ, và vẫn nhìn tớ, thương tớ hơn cả ngày đầu. Chỉ mong đoạn đường sau này, mình sẽ lại nhẹ nhàng với nhau hơn 1 chút, mọi thứ, rồi sẽ nhẹ nhàng với mình hơn một chút, để cứ tới cuối ngày, mình lại vẫn thấy nhau ở đó, vẫn cùng nhau chia sẻ mọi buồn vui mà thế giới ngoài kia đem lại.</p>
+    </div>
+    <!-- LETTER END -->
+    <div class="sign"><span>Tớ thương iu, iu xúi</span><svg><use href="#heart"/></svg></div>
+  </article>
+
+  <div class="actions">
+    <button class="hearts" id="heartBtn" type="button"><svg><use href="#heart"/></svg>Thả tim</button>
+  </div>
+</main>
+
+<script>
+(function () {
+  var layer = document.getElementById('riseLayer');
+  var btn = document.getElementById('heartBtn');
+  function spawn(x) {
+    var el = document.createElement('div');
+    var size = 14 + Math.random() * 20;
+    el.className = 'rise';
+    el.style.left = x + 'px';
+    el.style.width = size + 'px';
+    el.style.height = size + 'px';
+    el.style.setProperty('--dur', (2.4 + Math.random() * 1.6) + 's');
+    el.style.setProperty('--drift', (Math.random() * 80 - 40) + 'px');
+    el.innerHTML = '<svg><use href="#heart"/></svg>';
+    layer.appendChild(el);
+    setTimeout(function () { el.remove(); }, 4500);
+  }
+  btn.addEventListener('click', function () {
+    var r = btn.getBoundingClientRect();
+    var cx = r.left + r.width / 2;
+    for (var i = 0; i < 9; i++) {
+      (function (i) {
+        setTimeout(function () { spawn(cx + (Math.random() * 160 - 80)); }, i * 90);
+      })(i);
+    }
+  });
+})();
+</script>
+
+</body></html>
